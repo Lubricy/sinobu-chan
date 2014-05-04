@@ -1,11 +1,12 @@
 import jieba.posseg as pseg
 class sentence():
-    words=[]
+#    words={}
     def __init__(self,sentence=''):
-        self.words=pseg.cut(sentence)
+        self.sentence = sentence
+        self.words=[(w.word,w.flag) for w in pseg.cut(sentence)]
 
     def isquestion(self):
-        return ('y' in [w.flag for w in self.words])
+        return ('y' in [w[1] for w in self.words])
 
 
         

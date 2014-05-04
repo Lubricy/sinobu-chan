@@ -1,4 +1,5 @@
 from brain import robot
+import utils.io as io
 r = robot()
 def main():
     while(1):
@@ -9,6 +10,7 @@ def main():
             print r.think(a);
 
 def shell():
+    io.warning("shell mode")
     while(1):
         a=raw_input("# ")
         if a=="q":
