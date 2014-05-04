@@ -1,0 +1,4 @@
+def getClass(instence):
+    pass;
+
+
